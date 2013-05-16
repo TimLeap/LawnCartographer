@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE757660-3D24-4806-A543-0D355E483D8C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LawnCartography</RootNamespace>
+    <AssemblyName>LawnCartographer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LawnCartography.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBase.cs">
+      <DependentUpon>DataBase.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EVE.Net\Account\AccountStatus.cs" />
+    <Compile Include="EVE.Net\Account\APIKeyInfo.cs" />
+    <Compile Include="EVE.Net\Account\Characters.cs" />
+    <Compile Include="EVE.Net\APIObject.cs" />
+    <Compile Include="EVE.Net\APIReader.cs" />
+    <Compile Include="EVE.Net\Character\AccountBalance.cs" />
+    <Compile Include="EVE.Net\Character\AssetList.cs" />
+    <Compile Include="EVE.Net\Character\CalendarEventAttendees.cs" />
+    <Compile Include="EVE.Net\Character\CharacterSheet.cs" />
+    <Compile Include="EVE.Net\Character\ContactList.cs" />
+    <Compile Include="EVE.Net\Character\ContactNotifications.cs" />
+    <Compile Include="EVE.Net\Character\ContractBids.cs" />
+    <Compile Include="EVE.Net\Character\ContractItems.cs" />
+    <Compile Include="EVE.Net\Character\Contracts.cs" />
+    <Compile Include="EVE.Net\Character\FactionalWarfareStats.cs" />
+    <Compile Include="EVE.Net\Character\IndustryJobs.cs" />
+    <Compile Include="EVE.Net\Character\KillLog.cs" />
+    <Compile Include="EVE.Net\Character\Locations.cs" />
+    <Compile Include="EVE.Net\Character\MailBodies.cs" />
+    <Compile Include="EVE.Net\Character\MailingLists.cs" />
+    <Compile Include="EVE.Net\Character\MailMessages.cs" />
+    <Compile Include="EVE.Net\Character\MarketOrders.cs" />
+    <Compile Include="EVE.Net\Character\Medals.cs" />
+    <Compile Include="EVE.Net\Character\Notifications.cs" />
+    <Compile Include="EVE.Net\Character\NotificationTexts.cs" />
+    <Compile Include="EVE.Net\Character\NPCStandings.cs" />
+    <Compile Include="EVE.Net\Character\Research.cs" />
+    <Compile Include="EVE.Net\Character\SkillInTraining.cs" />
+    <Compile Include="EVE.Net\Character\SkillQueue.cs" />
+    <Compile Include="EVE.Net\Character\UpcomingCalendarEvents.cs" />
+    <Compile Include="EVE.Net\Character\WalletJournal.cs" />
+    <Compile Include="EVE.Net\Character\WalletTransactions.cs" />
+    <Compile Include="EVE.Net\Corporation\ContainerLog.cs" />
+    <Compile Include="EVE.Net\Corporation\CorporationSheet.cs" />
+    <Compile Include="EVE.Net\Corporation\FactionalWarfareStats.cs" />
+    <Compile Include="EVE.Net\Corporation\Medals.cs" />
+    <Compile Include="EVE.Net\Corporation\MemberMedals.cs" />
+    <Compile Include="EVE.Net\Corporation\MemberSecurity.cs" />
+    <Compile Include="EVE.Net\Corporation\MemberSecurityLog.cs" />
+    <Compile Include="EVE.Net\Corporation\MemberTracking.cs" />
+    <Compile Include="EVE.Net\Corporation\OutpostServiceDetail.cs" />
+    <Compile Include="EVE.Net\Corporation\OutpostsList.cs" />
+    <Compile Include="EVE.Net\Corporation\Shareholders.cs" />
+    <Compile Include="EVE.Net\Corporation\Titles.cs" />
+    <Compile Include="EVE.Net\EVEConstants.cs" />
+    <Compile Include="EVE.Net\EVE\AllianceList.cs" />
+    <Compile Include="EVE.Net\EVE\CallList.cs" />
+    <Compile Include="EVE.Net\EVE\CertificateTree.cs" />
+    <Compile Include="EVE.Net\EVE\CharacterID.cs" />
+    <Compile Include="EVE.Net\EVE\CharacterInfo.cs" />
+    <Compile Include="EVE.Net\EVE\CharacterName.cs" />
+    <Compile Include="EVE.Net\EVE\ConquerableStationList.cs" />
+    <Compile Include="EVE.Net\EVE\ErrorList.cs" />
+    <Compile Include="EVE.Net\EVE\FacWarStats.cs" />
+    <Compile Include="EVE.Net\EVE\FacWarTopStats.cs" />
+    <Compile Include="EVE.Net\EVE\ImageServer.cs" />
+    <Compile Include="EVE.Net\EVE\RefTypes.cs" />
+    <Compile Include="EVE.Net\EVE\ServerStatus.cs" />
+    <Compile Include="EVE.Net\EVE\SkillTree.cs" />
+    <Compile Include="EVE.Net\EVE\TypeName.cs" />
+    <Compile Include="EVE.Net\IAPIReader.cs" />
+    <Compile Include="EVE.Net\Map\FacWarSystems.cs" />
+    <Compile Include="EVE.Net\Map\Jumps.cs" />
+    <Compile Include="EVE.Net\Map\Kills.cs" />
+    <Compile Include="EVE.Net\Map\Sovereignty.cs" />
+    <Compile Include="EVE.Net\Settings.cs" />
+    <Compile Include="EVE.Net\XmlIdentifier.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Upload\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DataBase.dbml.layout">
+      <DependentUpon>DataBase.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataBase.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataBase.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EVE.Net\CARules.ruleset" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\Upload\Update.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EVE.Net\EVE.Net.csproj" />
+    <Content Include="EVE.Net\LICENSE.txt" />
+    <Content Include="EVE.Net\README.txt" />
+    <Content Include="EVE.Net\RevisionHistory.txt" />
+    <Content Include="gnome02.ico" />
+    <None Include="Service References\Upload\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Upload\configuration.svcinfo" />
+    <None Include="Service References\Upload\configuration91.svcinfo" />
+    <None Include="Service References\Upload\Update.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EVE.Net\Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Upload\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
